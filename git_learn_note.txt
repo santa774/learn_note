@@ -1,0 +1,60 @@
+1.安装Git
+Windows上安装Git，下载msysgit：https://git-for-windows.github.io
+安装完成后，还需要最后一步设置，在命令行输入：
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+
+2.创建版本库
+$ mkdir gitdemo
+$ cd gitdemo
+$ pwd   （pwd命令用于显示当前目录）
+C:\Users\Administrator\gitdemo
+
+然后通过git init命令把这个目录变成Git可以管理的仓库：
+$ git init
+
+
+3.提交文件
+第一步，用命令git add告诉Git，把文件添加到仓库：
+$ git add readme.txt
+
+第二步，用命令git commit告诉Git，把文件提交到仓库：
+$ git commit -m "wrote a readme file"         （-m后面输入的是本次提交的说明）
+
+
+4.版本回退
+$ git reset --hard HEAD^     （上一个版本就是HEAD^，上上一个版本就是HEAD^^，往上100个版本，写成HEAD~100。）
+$ git reset --hard 3628164    （使用commit id回退到指定的版本，，，版本号没必要写全，前几位就可以了）
+
+
+5.撤销修改
+$ git checkout -- readme.txt   (把工作区的修改全部撤销，回到最后提交的版本)
+$ git reset HEAD readme.txt    (把暂存区的修改撤销掉，重新放回工作区)
+
+
+6.删除文件
+$ git rm test.txt
+$ git commit -m "remove test.txt"
+
+
+7.远程仓库
+使用GitHub作为远程仓库，本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置
+第1步：创建SSH Key ： $ ssh-keygen -t rsa -C "youremail@example.com"
+第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
+
+要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+
+从远程库克隆：git clone git@github.com:santa774/repository_one.git
+
+
+
+**.git命令
+$ git status      (git status命令可以让我们时刻掌握仓库当前的状态)
+$ git diff readme.txt   (查看difference)
+$ git log   (查看提交历史)
+$ git log --pretty=oneline    (历史记录显示在一行)
+$ git reflog  (查看命令历史)
