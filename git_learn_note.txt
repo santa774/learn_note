@@ -62,9 +62,13 @@ $ git branch -d branch_name    (删除指定的分支)
 创建分支并在分支上工作的好处是：提交的修改只作用于当前的分支，这样做更加的安全。确保分支的工作都完成后，就合并到主分支
 
 
-9 conflict fixed
+9.解决冲突
+当有冲突的时候，Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容。
+需要修改后再提交才能解决冲突
+$ git log --graph --pretty=oneline --abbrev-commit    （查看分支的合并情况）
 
 
+10 分支管理策略
 
 **.git命令
 $ git status      (git status命令可以让我们时刻掌握仓库当前的状态)
