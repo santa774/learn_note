@@ -52,6 +52,10 @@ $ git commit -m "remove test.txt"
 
 
 
+8.分支管理
+创建分支： git branch -b branch_name
+
+
 **.git命令
 $ git status      (git status命令可以让我们时刻掌握仓库当前的状态)
 $ git diff readme.txt   (查看difference)
