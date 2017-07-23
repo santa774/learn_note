@@ -73,6 +73,11 @@ GitºÏ²¢·ÖÖ§µÄÊ±ºòÄ¬ÈÏÊ¹ÓÃµÄÊÇFast Forward£¨¿ì½øÄ£Ê½£©£¬ÔÚÕâÖÖÄ£Ê½ÏÂ£¬É¾µô·ÖÖ§ºó£
 ¿ÉÒÔÇ¿ÖÆ½ûÓÃFast ForwardÄ£Ê½£¬ÕâÑùÔÚmergeµÄÊ±ºòGit¾Í»áÉú³ÉÒ»¸öÐÂµÄcommit£¬¾Í¿ÉÒÔÔÚ·ÖÖ§ÀúÊ·ÉÏ¿´µ½·ÖÖ§ÐÅÏ¢¡£
 git merge --no-ff -m "Ìá½»µÄÃèÊö" branch_name      £¨½ûÓÃ¿ì½øÄ£Ê½ºÏ²¢·ÖÖ§£©
 
+ÔÚÊµ¼Ê¿ª·¢ÖÐ£¬ÎÒÃÇÓ¦¸Ã°´ÕÕ¼¸¸ö»ù±¾Ô­Ôò½øÐÐ·ÖÖ§¹ÜÀí£º
+Ê×ÏÈ£¬master·ÖÖ§Ó¦¸ÃÊÇ·Ç³£ÎÈ¶¨µÄ£¬Ò²¾ÍÊÇ½öÓÃÀ´·¢²¼ÐÂ°æ±¾£¬Æ½Ê±²»ÄÜÔÚÉÏÃæ¸É»î£»
+ÄÇÔÚÄÄ¸É»îÄØ£¿¸É»î¶¼ÔÚdev·ÖÖ§ÉÏ£¬Ò²¾ÍÊÇËµ£¬dev·ÖÖ§ÊÇ²»ÎÈ¶¨µÄ£¬µ½Ä³¸öÊ±ºò£¬±ÈÈç1.0°æ±¾·¢²¼Ê±£¬ÔÙ°Ñdev·ÖÖ§ºÏ²¢µ½masterÉÏ£¬ÔÚmaster·ÖÖ§·¢²¼1.0°æ±¾£»
+ÄãºÍÄãµÄÐ¡»ï°éÃÇÃ¿¸öÈË¶¼ÔÚdev·ÖÖ§ÉÏ¸É»î£¬Ã¿¸öÈË¶¼ÓÐ×Ô¼ºµÄ·ÖÖ§£¬Ê±²»Ê±µØÍùdev·ÖÖ§ÉÏºÏ²¢¾Í¿ÉÒÔÁË¡£
+
 
 
 **.gitÃüÁî
