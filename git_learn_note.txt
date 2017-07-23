@@ -69,6 +69,11 @@ $ git log --graph --pretty=oneline --abbrev-commit    （查看分支的合并情况）
 
 
 10 分支管理策略
+Git合并分支的时候默认使用的是Fast Forward（快进模式），在这种模式下，删掉分支后，会丢失分支的信息。
+可以强制禁用Fast Forward模式，这样在merge的时候Git就会生成一个新的commit，就可以在分支历史上看到分支信息。
+git merge --no-ff -m "提交的描述" branch_name      （禁用快进模式合并分支）
+
+
 
 **.git命令
 $ git status      (git status命令可以让我们时刻掌握仓库当前的状态)
