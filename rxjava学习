@@ -1,0 +1,37 @@
+subscribe方法使用案例：
+直接发送一个 List 集合数据给观察者
+List<Integer> list = new ArrayList<>();
+list.add(0);
+list.add(1);
+list.add(2);
+list.add(3);
+Observable.fromIterable(list)
+.subscribe(new Observer < Integer > () {
+    @Override
+    public void onSubscribe(Disposable d) {
+        Log.d(TAG, "=================onSubscribe");
+    }
+
+    @Override
+    public void onNext(Integer integer) {
+        Log.d(TAG, "=================onNext " + integer);
+    }
+
+    @Override
+    public void onError(Throwable e) {
+        Log.d(TAG, "=================onError ");
+    }
+
+    @Override
+    public void onComplete() {
+        Log.d(TAG, "=================onComplete ");
+    }
+});
+
+打印结果如下：
+05-20 16:43:28.874 23965-23965/? D/chan: =================onSubscribe
+=================onNext 0
+=================onNext 1
+=================onNext 2
+=================onNext 3
+=================onComplete 
